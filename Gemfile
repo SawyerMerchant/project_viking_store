@@ -29,9 +29,11 @@ gem 'spring',  '~> 1.3.6',      group: :development
 gem 'faker'
 
 group :development do
-  gem 'pry-byebug'
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'jazz_fingers'
-  gem 'pry-rails'
 end
 
 gem 'bootstrap-sass'
