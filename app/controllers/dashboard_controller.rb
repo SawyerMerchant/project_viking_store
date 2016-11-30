@@ -5,6 +5,5 @@ class DashboardController < ApplicationController
     @all_products_count = Product.all.count
     d = Dashboard.new
     @total_revenue = d.revenue_between(Time.new('1999'), Time.now)
-    # @total_revenue = # qty *
   end
 end
