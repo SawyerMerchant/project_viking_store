@@ -19,15 +19,13 @@ default: &default
   encoding: unicode
   host: localhost
   timeout: 5000
-  port: 5433
-  password: alexa
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
 development:
   <<: *default
-  database: project_viking_store_development
+  database: db/project_viking_store/development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
