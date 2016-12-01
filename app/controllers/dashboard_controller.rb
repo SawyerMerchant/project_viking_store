@@ -4,8 +4,6 @@ class DashboardController < ApplicationController
   MONTH_AGO = 1.month.ago
   BEGINNING = Time.new('1900')
   def show
-
-    d = Dashboard.new
     @all_users_count = User.joined_between(BEGINNING, TODAY)
     @users_in_last_week = User.joined_between(WEEK_AGO, TODAY)
     @users_in_last_month = User.joined_between(MONTH_AGO, TODAY)
@@ -22,5 +20,8 @@ class DashboardController < ApplicationController
     @all_orders_count = Order.placed_between(BEGINNING, TODAY)
     @orders_in_last_week = Order.placed_between(WEEK_AGO, TODAY)
     @orders_in_last_month = Order.placed_between(MONTH_AGO, TODAY)
+
+    @top_three_states = User.in_state(3)
+    @top_three_cities = User.in_city(3)
   end
 end

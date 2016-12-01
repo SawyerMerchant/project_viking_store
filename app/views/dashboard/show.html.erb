@@ -87,37 +87,22 @@
         <th>Item</th>
         <th>Data</th>
       </thead>
-      <tr>
-        <td>California</td>
-        <td>23</td>
-      </tr>
-      <tr>
-        <td>Texas</td>
-        <td>10</td>
-      </tr>
-        <td>Oregon</td>
-        <td>3</td>
-      </tr>
+      <% @top_three_states.each do |state, users| %>
+        <tr>
+          <td><%= state  %></td>
+          <td><%= users %></td>
+        </tr>
+      <% end %>
     </table>
 
     <h3>Top Three Cities Users Live In (Billing)</h3>
     <table>
-      <tr>
-        <th>Item</th>
-        <th>Data</th>
-      </tr>
-      <tr>
-        <td>Los Angeles</td>
-        <td>23</td>
-      </tr>
-      <tr>
-        <td>Austin</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Portland</td>
-        <td>3</td>
-      </tr>
+      <% @top_three_cities.each do |city, users| %>
+        <tr>
+          <td><%= city  %></td>
+          <td><%= users %></td>
+        </tr>
+      <% end %>
     </table>
 
     <h3>Top Users With...</h3>
