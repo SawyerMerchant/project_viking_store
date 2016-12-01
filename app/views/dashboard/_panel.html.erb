@@ -1,0 +1,40 @@
+<article class="col-md-6 panel">
+  <h2><%= panel_title %></h2>
+  <h3>Last 7 Days</h3>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <th>Item</th>
+      <th>Data</th>
+    </thead>
+    <tr>
+      <td>New Users</td>
+      <td><%= @users_in_last_week %></td>
+    </tr>
+    <tr>
+      <td>Orders</td>
+      <td><%=  @orders_in_last_week %></td>
+    </tr>
+    <tr>
+      <td>New Products</td>
+      <td><%= @products_in_last_week %></td>
+    </tr>
+    <tr>
+      <td>Revenue</td>
+      <td><%= @revenue_in_last_week %></td>
+    </tr>
+  </table>
+<!-- 
+panel_title: "Overall",
+tables: {
+  all time: {
+    th: [item, data],
+    [i1, d1],
+    [i2, d2]
+    },
+  week: {
+    th: [item, data],
+    [i1, d1],
+    
+  } -->
+
+}
